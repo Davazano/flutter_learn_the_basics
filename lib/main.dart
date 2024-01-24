@@ -13,22 +13,19 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('App Title X'),
-          backgroundColor: const Color(0xFFFF9000)
-        ),
-        body: const Text('Body'),
-        bottomNavigationBar: BottomNavigationBar(
-          items: const [
-            BottomNavigationBarItem(
-              label: "Home",
-              icon: Icon(Icons.home)
-            ),
-            BottomNavigationBarItem(
-              label: "Settings",
-              icon: Icon(Icons.settings)
-            )
-          ]
-        ),
+            title: const Text('App Title X'),
+            backgroundColor: const Color(0xFFFF9000)),
+        body: const Center(child: Text('Body')),
+        bottomNavigationBar: BottomNavigationBar(items: const [
+          BottomNavigationBarItem(
+            label: "Home",
+            icon: Icon(Icons.home),
+          ),
+          BottomNavigationBarItem(
+            label: "Settings",
+            icon: Icon(Icons.settings),
+          )
+        ]),
       ),
     );
   }
