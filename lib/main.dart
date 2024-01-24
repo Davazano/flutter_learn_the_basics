@@ -15,7 +15,12 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
             title: const Text('App Title X'),
             backgroundColor: const Color(0xFFFF9000)),
-        body: const Center(child: Text('Body')),
+        body: Center(
+          child: ElevatedButton(
+            onPressed: (){},
+            child: const Text('Click'),
+          ),
+        ),
         bottomNavigationBar: BottomNavigationBar(items: const [
           BottomNavigationBarItem(
             label: "Home",
