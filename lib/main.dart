@@ -17,7 +17,9 @@ class MyApp extends StatelessWidget {
             backgroundColor: const Color(0xFFFF9000)),
         body: Center(
           child: ElevatedButton(
-            onPressed: (){},
+            onPressed: (){
+              print('Testing Elevated Button');
+            },
             child: const Text('Click'),
           ),
         ),
