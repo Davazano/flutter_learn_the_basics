@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: const Text('App Title X'),
-          backgroundColor: Color(0xFFFF9000)
+          backgroundColor: const Color(0xFFFF9000)
         ),
         body: const Text('Body'),
         bottomNavigationBar: BottomNavigationBar(
