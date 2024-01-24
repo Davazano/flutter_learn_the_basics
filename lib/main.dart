@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
           title: Text('App Title X'),
           backgroundColor: Color(0xFFFF9000)
         ),
+        body: Text('Body'),
       ),
     );
   }
