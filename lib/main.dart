@@ -17,6 +17,18 @@ class MyApp extends StatelessWidget {
           backgroundColor: Color(0xFFFF9000)
         ),
         body: Text('Body'),
+        bottomNavigationBar: BottomNavigationBar(
+          items: [
+            BottomNavigationBarItem(
+              label: "Home",
+              icon: Icon(Icons.home)
+            ),
+            BottomNavigationBarItem(
+              label: "Settings",
+              icon: Icon(Icons.settings)
+            )
+          ]
+        ),
       ),
     );
   }
