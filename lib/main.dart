@@ -24,26 +24,31 @@ class _MyAppState extends State<MyApp> {
             title: const Text('App Title X'),
             backgroundColor: const Color(0xFFFF9000)),
         body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              ElevatedButton(
-                onPressed: () {
-                  setState(() {
-                    buttonName = 'Clicked';
-                  });
-                },
-                child: Text(buttonName),
-              ),
-              ElevatedButton(
-                onPressed: () {
-                  setState(() {
-                    buttonName = 'Clicked';
-                  });
-                },
-                child: Text(buttonName),
-              ),
-            ],
+          child: SizedBox(
+            width: double.infinity,
+            height: double.infinity,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    setState(() {
+                      buttonName = 'Clicked';
+                    });
+                  },
+                  child: Text(buttonName),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    setState(() {
+                      buttonName = 'Clicked';
+                    });
+                  },
+                  child: Text(buttonName),
+                ),
+              ],
+            ),
           ),
         ),
         bottomNavigationBar: BottomNavigationBar(
