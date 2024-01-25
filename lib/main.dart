@@ -4,8 +4,14 @@ void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   String buttonName = 'Click';
 
   @override
@@ -18,8 +24,10 @@ class MyApp extends StatelessWidget {
             backgroundColor: const Color(0xFFFF9000)),
         body: Center(
           child: ElevatedButton(
-            onPressed: (){
-              print('Testing Elevated Button');
+            onPressed: () {
+              setState(() {
+                buttonName = 'Clicked';
+              });
             },
             child: Text(buttonName),
           ),
