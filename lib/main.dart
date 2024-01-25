@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({super.key});
+  String buttonName = 'Click';
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
             onPressed: (){
               print('Testing Elevated Button');
             },
-            child: const Text('Click'),
+            child: Text(buttonName),
           ),
         ),
         bottomNavigationBar: BottomNavigationBar(items: const [
