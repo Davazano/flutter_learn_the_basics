@@ -27,9 +27,9 @@ class _MyAppState extends State<MyApp> {
           child: SizedBox(
             width: double.infinity,
             height: double.infinity,
-            child: Column(
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 ElevatedButton(
                   onPressed: () {
