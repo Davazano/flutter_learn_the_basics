@@ -24,7 +24,7 @@ class _MyAppState extends State<MyApp> {
             title: const Text('App Title X'),
             backgroundColor: const Color(0xFFFF9000)),
         body: Center(
-          child: Container(
+          child: currentIndex == 0 ? Container(
             width: double.infinity,
             height: double.infinity,
             color: Colors.amber,
@@ -58,7 +58,7 @@ class _MyAppState extends State<MyApp> {
                 ),
               ],
             ),
-          ),
+          ) : const SizedBox(),
         ),
         bottomNavigationBar: BottomNavigationBar(
           items: const [
