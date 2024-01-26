@@ -12,14 +12,30 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: HomePage(),
+    );
+  }
+}
+
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   String buttonName = 'Click';
   int currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
+    return Scaffold(
         appBar: AppBar(
             title: const Text('App Title X'),
             backgroundColor: const Color(0xFFFF9000)),
@@ -50,11 +66,15 @@ class _MyAppState extends State<MyApp> {
                             foregroundColor: Colors.white,
                             backgroundColor: Colors.lightBlue),
                         onPressed: () {
-                          setState(() {
-                            buttonName = 'Clicked';
-                          });
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (BuildContext context) {
+                                return const SecondPage();
+                              },
+                            ),
+                          );
                         },
-                        child: Text(buttonName),
+                        child: const Text("Go to Page 2"),
                       ),
                     ],
                   ),
@@ -79,6 +99,18 @@ class _MyAppState extends State<MyApp> {
             });
           },
         ),
+      );
+  }
+}
+
+class SecondPage extends StatelessWidget {
+  const SecondPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.red,
       ),
     );
   }
