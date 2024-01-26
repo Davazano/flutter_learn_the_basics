@@ -24,9 +24,10 @@ class _MyAppState extends State<MyApp> {
             title: const Text('App Title X'),
             backgroundColor: const Color(0xFFFF9000)),
         body: Center(
-          child: SizedBox(
+          child: Container(
             width: double.infinity,
             height: double.infinity,
+            color: Colors.amber,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
