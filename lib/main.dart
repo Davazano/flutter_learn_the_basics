@@ -59,7 +59,7 @@ class _MyAppState extends State<MyApp> {
                     ],
                   ),
                 )
-              : Image.network('https://e0.pxfuel.com/wallpapers/592/159/desktop-wallpaper-aurora-boreals-sky-boreals-northern-lights-aurora.jpg'),
+              : Image.asset('images/galaxy.jpg'),
         ),
         bottomNavigationBar: BottomNavigationBar(
           items: const [
