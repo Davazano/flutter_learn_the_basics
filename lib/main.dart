@@ -24,41 +24,42 @@ class _MyAppState extends State<MyApp> {
             title: const Text('App Title X'),
             backgroundColor: const Color(0xFFFF9000)),
         body: Center(
-          child: currentIndex == 0 ? Container(
-            width: double.infinity,
-            height: double.infinity,
-            color: Colors.amber,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    foregroundColor: const Color.fromARGB(255, 255, 255, 255),
-                    backgroundColor: Colors.amber[800]
+          child: currentIndex == 0
+              ? Container(
+                  width: double.infinity,
+                  height: double.infinity,
+                  color: Colors.amber,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            foregroundColor:
+                                const Color.fromARGB(255, 255, 255, 255),
+                            backgroundColor: Colors.amber[800]),
+                        onPressed: () {
+                          setState(() {
+                            buttonName = 'Clicked';
+                          });
+                        },
+                        child: Text(buttonName),
+                      ),
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            foregroundColor: Colors.white,
+                            backgroundColor: Colors.lightBlue),
+                        onPressed: () {
+                          setState(() {
+                            buttonName = 'Clicked';
+                          });
+                        },
+                        child: Text(buttonName),
+                      ),
+                    ],
                   ),
-                  onPressed: () {
-                    setState(() {
-                      buttonName = 'Clicked';
-                    });
-                  },
-                  child: Text(buttonName),
-                ),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    foregroundColor: Colors.white,
-                    backgroundColor: Colors.lightBlue
-                  ),
-                  onPressed: () {
-                    setState(() {
-                      buttonName = 'Clicked';
-                    });
-                  },
-                  child: Text(buttonName),
-                ),
-              ],
-            ),
-          ) : const SizedBox(),
+                )
+              : Image.network('https://e0.pxfuel.com/wallpapers/592/159/desktop-wallpaper-aurora-boreals-sky-boreals-northern-lights-aurora.jpg'),
         ),
         bottomNavigationBar: BottomNavigationBar(
           items: const [
